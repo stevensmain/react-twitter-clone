@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
-type FormState = [
+type useForm = [
   { [key: string]: string },
   (event: React.ChangeEvent<HTMLInputElement>) => void,
   () => void
 ]
 
-export const useForm = (initialState: { [key: string]: string }): FormState => {
+interface FormValues {
+  [key: string]: string
+}
+
+export default function useForm(initialState: FormValues): useForm {
   const [values, setValues] = useState(initialState)
 
   const reset = () => {

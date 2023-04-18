@@ -1,6 +1,7 @@
 'use client'
-import { AiOutlineClose } from 'react-icons/ai'
 import { useCallback } from 'react'
+
+import { AiOutlineClose } from 'react-icons/ai'
 import Button from './Button'
 
 interface ModalProps {
@@ -45,7 +46,7 @@ const Modal: React.FC<ModalProps> = ({
 
   return (
     <div className="flex items-center justify-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-neutral-800 bg-opacity-70">
-      <div className="relative w-full lg:w-3/6 my-6 mx-auto lg:max-w-3xl h-full lg:h-auto">
+      <div className="relative w-full lg:w-3/6 py-6 mx-auto lg:max-w-3xl h-full lg:h-auto">
         <div className="h-full lg:h-auto border-0 rounded-lg shadow-lg flex flex-col w-full bg-black outline-none focus:outline-none">
           {/* Header */}
           <div className="flex justify-center items-center rounded-t p-10">

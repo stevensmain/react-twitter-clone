@@ -1,9 +1,9 @@
 import Sidebar from '@/components/layout/Sidebar'
 import FollowBar from '@/components/layout/FollowBar'
-import './globals.css'
 import AppLayout from '@/components/layout/AppLayout'
-import Modal from '@/components/Modal'
 import LoginModal from '@/components/auth/LoginModal'
+import RegisterModal from '@/components/auth/RegisterModal'
+import './globals.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -19,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <LoginModal />
+        <RegisterModal />
         <AppLayout>{children}</AppLayout>
       </body>
     </html>
