@@ -1,4 +1,9 @@
+import Sidebar from '@/components/layout/Sidebar'
+import FollowBar from '@/components/layout/FollowBar'
 import './globals.css'
+import AppLayout from '@/components/layout/AppLayout'
+import Modal from '@/components/Modal'
+import LoginModal from '@/components/auth/LoginModal'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LoginModal />
+        <AppLayout>{children}</AppLayout>
+      </body>
     </html>
   )
 }
